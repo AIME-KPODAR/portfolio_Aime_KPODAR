@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mon Portfolio</title>
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="style_home.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <!-- BACKGROUND ICONS -->
+            <div class="bg"></div>
+            <div class="bg bg2"></div>
+            <div class="bg bg3"></div>
+
+            <!-- HEADER -->
+            <nav class="entete">
+
+                <div class="logo">
+                    <span>P</span>rofil<b>.</b>
+                </div>
+
+                <!-- MENU MOBILE BUTTON -->
+                <div class="toggle-menu" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <div class="menu" id="menu">
+
+                    <li><a href="home.html"
+                            data-i18n="nav_home">Accueil</a></li>
+
+                    <li><a href="a_Propos.html" data-i18n="nav_about">À
+                            Propos</a></li>
+
+                    <li><a href="competances.html"
+                            data-i18n="nav_skills">Compétences</a></li>
+
+                    <li><a href="realisation.html"
+                            data-i18n="nav_projects">Réalisations</a></li>
+
+                    <li><a href="services.html"
+                            data-i18n="nav_services">Services</a></li>
+
+                    <li><a href="preuves.html"
+                            data-i18n="nav_certificates">Certificats</a></li>
+
+                </div>
+
+                <div class="reseaux">
+                    <a href="mailto:assiongbonaimekpodar@gmail.com"><i
+                            class="fa-solid fa-at"></i></a>
+                    <a href="https://www.linkedin.com/in/assiongbon-aim%C3%A9-kpodar"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/97953754/"><i class="fab fa-whatsapp"></i></a>
+                </div>
+
+                <!-- LANGUAGE SWITCH -->
+                <div class="lang-switch">
+                    <button onclick="setLanguage('fr')">FR</button>
+                    <button onclick="setLanguage('en')">EN</button>
+                </div>
+
+            </nav>
+
+            <!-- MAIN -->
+            <div class="corps">
+
+                <div class="Cgauche">
+
+                    <span class="textB" data-i18n="hello">Salut</span>
+
+                    <h1>
+                        <span data-i18n="iam">Je suis</span>
+                        <span id="textDefile"></span>
+                    </h1>
+
+                    <p data-i18n="description">
+                        Technicien support informatique | Développeur junior
+                        Python | IoT
+                    </p>
+
+                    <div class="btn2">
+                        <a href="pdf/CV.pdf">
+                            <button class="btn-principal"
+                                data-i18n="download_cv">Télécharger CV</button>
+                        </a>
+
+                        <a href="voir_Cv.html">
+                            <button class="btn-secondaire"
+                                data-i18n="view_cv">Voir CV</button>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="Cdroite">
+                    <div class="groupImg">
+                        <img src="images/background.png" id="idbg">
+                        <img src="images/aimé.png" >
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TYPED JS -->
+        <script
+            src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+
+        <script>
+let typedInstance;
+
+function startTyped(lang) {
+
+    if (typedInstance) {
+        typedInstance.destroy();
+    }
+
+    typedInstance = new Typed('#textDefile', {
+        strings: translations[lang].typed,
+        loop: true,
+        typeSpeed: 50,
+        backSpeed: 80,
+    });
+}
+</script>
+
+        <!-- MENU TOGGLE -->
+        <script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+        <!-- BILINGUE -->
+        <script>
+const translations = {
+    fr: {
+        nav_home: "Accueil",
+        nav_about: "À Propos",
+        nav_skills: "Compétences",
+        nav_projects: "Réalisations",
+        nav_services: "Services",
+        nav_certificates: "Certificats",
+        hello: "Salut",
+        iam: "Je suis",
+        description: "Technicien support informatique | Développeur junior Python | IoT",
+
+        typed: [
+            "KPODAR Assiongbon Aimé",
+            "Développeur",
+            "Technicien Support Informatique"
+        ],
+
+        download_cv: "Télécharger CV",
+        view_cv: "Voir CV"
+    },
+
+    en: {
+        nav_home: "Home",
+        nav_about: "About",
+        nav_skills: "Skills",
+        nav_projects: "Projects",
+        nav_services: "Services",
+        nav_certificates: "Certificates",
+        hello: "Hello",
+        iam: "I am",
+        description: "IT Support Technician | Junior Python Developer | IoT Systems",
+
+        typed: [
+            "Assiongbon Aimé KPODAR",
+            "Developer",
+            "IT Support Technician"
+        ],
+
+        download_cv: "Download CV",
+        view_cv: "View CV"
+    }
+};
+
+
+function setLanguage(lang) {
+    localStorage.setItem("lang", lang);
+
+    // textes statiques
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+
+    // texte défilant (IMPORTANT)
+    startTyped(lang);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const lang = localStorage.getItem("lang") || "fr";
+    setLanguage(lang);
+});
+</script>
+
+    </body>
+</html>

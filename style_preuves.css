@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
+:root{
+    --my-color-gris: #f3f5f8;
+    --my-color-gris-fonce: #3d535f;
+    --my-color-bleu-ciel: hsla(187, 90%, 49%, 0.979);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+}
+
+
+
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.entete{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    z-index: 111;
+    line-height: 80px;
+    background-color: var(--my-color-gris);
+
+}
+
+.logo{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--my-color-gris-fonce);
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+b{
+    font-size: 70px;
+    color: var(--my-color-bleu-ciel);
+}
+
+.logo span{
+    color: var(--my-color-bleu-ciel)
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    margin: 0 15px;
+}
+
+.menu a{
+    font-size: 18px;
+    color: var(--my-color-gris-fonce);
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+
+.reseaux a{
+    font-size: 18px;
+    color: var(--my-color-gris-fonce);
+    margin: 25px 10px;
+}
+
+.menu li:hover a, .reseaux a:hover{
+    color: var(--my-color-bleu-ciel)
+}
+
+.corps{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 ;
+    overflow: hidden;
+    background-image: url(images/education-and-graduation-hat-free-png.png);
+    background-repeat: no-repeat;
+    background-image: cover;
+    background-position: center;
+    background-position: 50% 50%;
+    align-items: center;
+    margin: 0;
+    background-color: transparent;
+}
+
+
+h1{
+    display: block;
+    font: 3em;
+    font-weight: 900;
+    color: var(--my-color-gris-fonce);
+}
+
+p{
+    display:block;
+    width: 90%;
+    font-size: 1.2em;
+    text-align: justify;
+    color: var(--my-color-gris-fonce);
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 8% 60px;
+    position: relative;
+}
+
+
+.boutons-apropos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.btn-principal,
+.btn-secondaire {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-principal {
+    background: white;
+    color:  var(--my-color-bleu-ciel);
+    box-shadow: 0 8px 20px rgb(89, 180, 233);
+    border: 2px solid white;
+}
+
+.btn-principal:hover {
+    transform: translateY(-3px);
+}
+
+.btn-secondaire {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+}
+
+.btn-secondaire:hover {
+    background: var(--my-color-bleu-ciel);
+    color: white;
+}
+
+.hero-apropos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.texte-apropos {
+    flex: 1 1 500px;
+}
+
+.texte-apropos h2 {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 600;
+}
+
+/* FOND ANIME */
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #fff 50%, hsla(204, 90%, 72%, 0.938) 50%);
+    bottom: 0;
+    left: -70%;
+    opacity: .5;
+    position: fixed;
+    right: -70%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+
+body {
+  background: linear-gradient(132deg, var(--my-color-bleu-ciel),white, var(--my-color-bleu-ciel),white,var(--my-color-bleu-ciel),white);
+  background-size: 400% 400%;
+  animation: BackgroundGradient 15s ease infinite;
+}
+
+h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-family: Open Sans, sans-serif;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2em;
+  padding: 5px;
+}
+@keyframes BackgroundGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+  

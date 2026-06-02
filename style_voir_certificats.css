@@ -1,0 +1,217 @@
+@import url('https://fonts.googlesapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
+
+:root {
+    --my-color-gris: #f3f5f8;
+    --my-color-gris-fonce: #3d535f;
+   --my-color-bleu-ciel: hsla(187, 90%, 49%, 0.979);
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--my-color-gris);
+}
+
+.entete {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    z-index: 111;
+    line-height: 80px;
+
+}
+
+.logo {
+    display: flex;
+    font-size: 40px;
+    font-weight: 780;
+    color: var(--my-color-gris-fonce);
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+b {
+    font-size: 40px;
+    color: var(--my-color-bleu-ciel);
+}
+
+.logo span {
+    color: var(--my-color-bleu-ciel)
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    font-size: 18px;
+    color: var(--my-color-gris-fonce);
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+
+.reseaux a {
+    font-size: 18px;
+    color: var(--my-color-gris-fonce);
+    margin: 25px 10px;
+}
+
+.menu li:hover a,
+.reseaux a:hover {
+    color: var(--my-color-bleu-ciel)
+}
+
+.corps {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.textB {
+    display: block;
+    position: relative;
+    font-size: 45px;
+    letter-spacing: 5px;
+    color: var(--my-color-gris-fonce);
+}
+
+h1 {
+    display: block;
+    font: 3em;
+    font-weight: 900;
+    color: var(--my-color-gris-fonce);
+}
+
+p {
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    text-align: justify;
+    color: var(--my-color-gris-fonce);
+}
+
+.btn2 {
+    width: 100%;
+    position: relative;
+    left: 290px;
+    text-align: center;
+    top: -50px;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: var(--my-color-gris-fonce);
+    color: #fff;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 50px 12px 23px; 
+}
+
+button:hover {
+    background-color: var(--my-color-bleu-ciel);
+}
+
+
+
+
+.nom {
+    color: var(--my-color-gris-fonce);
+    font-size: 25px;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    font-weight: 600px;
+}
+
+
+h4{
+    display: flex;
+    font-size: 50px;
+    font-weight: 780;
+    color: var(--my-color-gris-fonce);
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: capitalize ;
+}
+.leaimé{
+    animation-duration: 3s;
+    animation-name: leaimé;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+@keyframes leaimé {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.outils {
+    padding: 0;
+}
+
+.outils ul {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+    justify-content: space-between;
+
+}
+
+.outils ul li {
+    list-style: none;
+    width: calc(100% / 4);
+    color: #333;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.outils ul li i {
+    font-size: 10em;
+}
+
+img{
+   width: 180px;
+   height: 180px;
+   
+}
