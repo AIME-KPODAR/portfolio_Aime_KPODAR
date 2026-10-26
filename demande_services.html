@@ -1,129 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Demande Services</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<style>
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f3f5f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-  }
-
-  form {
-    background-color: #fff;
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 400px;
-    transition: transform 0.3s ease;
-  }
-
-  form:hover {
-    transform: translateY(-5px);
-  }
-
-  form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #3d535f;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: #3d535f;
-    font-weight: 600;
-  }
-
-  input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    box-sizing: border-box;
-    resize: none;
-    transition: border-color 0.3s ease;
-  }
-
-  input:focus, textarea:focus {
-    border-color: #00c853;
-    outline: none;
-  }
-
-  button {
-    width: 100%;
-    padding: 14px;
-    background-color: #25D366;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  button:hover {
-    background-color: #128C7E;
-  }
-
-  @media (max-width: 500px) {
-    form {
-      padding: 20px;
-    }
-    h2 {
-      font-size: 20px;
-    }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f5f8">
+    <title>Demande de service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/site.css">
 </head>
-<body>
+<body data-page="request">
 
-<form id="contactForm">
-  <h2>Contactez-moi</h2>
-  <label for="nom">Nom :</label>
-  <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+    <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
 
-  <label for="email">Email :</label>
-  <input type="email" id="email" name="email" placeholder="Votre email" required>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
 
-  <label for="message">Message :</label>
-  <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+    <header class="entete">
+        <nav class="nav" data-i18n-aria="aria_nav" aria-label="Navigation principale">
+            <a class="logo" href="home.html" data-logo="logo_request"><span>D</span>emande<b>.</b></a>
 
-  <button type="submit"><i class="fab fa-whatsapp"></i> Envoyer sur WhatsApp</button>
-</form>
+            <div class="menu-panel" id="menu-panel">
+                <ul class="menu">
+                    <li><a href="home.html" data-i18n="nav_home">Accueil</a></li>
+                    <li><a href="a_Propos.html" data-i18n="nav_about">À propos</a></li>
+                    <li><a href="competances.html" data-i18n="nav_skills">Compétences</a></li>
+                    <li><a href="realisation.html" data-i18n="nav_projects">Réalisations</a></li>
+                    <li><a href="services.html" aria-current="page" data-i18n="nav_services">Services</a></li>
+                    <li><a href="preuves.html" data-i18n="nav_certs">Certificats</a></li>
+                </ul>
+                <div class="reseaux">
+                    <a href="mailto:assiongbonaimekpodar@gmail.com" aria-label="Email"><i class="fa-solid fa-at" aria-hidden="true"></i><span class="label">Email</span></a>
+                    <a href="https://www.linkedin.com/in/assiongbon-aim%C3%A9-kpodar-089682370" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a>
+                    <a href="https://wa.me/22897953754" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i><span class="label">WhatsApp</span></a>
+                </div>
+            </div>
 
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+            <div class="lang" role="group" data-i18n-aria="aria_lang" aria-label="Langue">
+                <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+                <button type="button" data-lang="en" aria-pressed="false">EN</button>
+            </div>
 
-    var nom = document.getElementById("nom").value.trim();
-    var email = document.getElementById("email").value.trim();
-    var message = document.getElementById("message").value.trim();
+            <button class="burger" type="button" aria-controls="menu-panel" aria-expanded="false" data-i18n-aria="aria_menu_open" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
 
-    var text = `Bonjour, je m'appelle ${nom}.%0AEmail: ${email}%0AMessage: ${message}`;
+    <ul class="liens-flottants">
+        <li><a href="https://wa.me/22897953754" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/assiongbon-aim%C3%A9-kpodar-089682370" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+    </ul>
 
-    // Remplace par ton numéro WhatsApp en format international sans + ni espaces
-    var numeroWhatsApp = "22897953754";
+    <main id="main" class="container">
+        <section class="section">
+            <form class="form-card" id="contactForm" data-wa-form data-wa-subject="wa_subj_request">
+                <h1 data-i18n="request_h1">Demander un service</h1>
+                <p class="intro" data-i18n="request_intro">Remplissez ce formulaire : votre message sera envoyé via WhatsApp.</p>
+                <label data-i18n="lbl_name" for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" autocomplete="name" required data-i18n-ph="ph_name" placeholder="Votre nom">
+                <label data-i18n="lbl_email" for="email">Email :</label>
+                <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required data-i18n-ph="ph_email" placeholder="Votre email">
+                <label data-i18n="lbl_message" for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required data-i18n-ph="ph_message" placeholder="Votre message"></textarea>
+                <button type="submit" class="btn-whatsapp"><i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-i18n="send_wa">Envoyer sur WhatsApp</span></button>
+            </form>
+        </section>
+    </main>
 
-    var url = `https://wa.me/${numeroWhatsApp}?text=${text}`;
-    window.open(url, "_blank");
-});
-</script>
-
+    <script src="js/translations.js"></script>
+    <script src="js/site.js"></script>
 </body>
 </html>

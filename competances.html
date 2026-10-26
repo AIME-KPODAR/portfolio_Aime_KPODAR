@@ -1,222 +1,186 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mes compétences</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f5f8">
+    <title>Mes compétences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body data-page="skills">
 
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        <link rel="stylesheet" href="style_competances.css">
-    </head>
-    <body>
-        <div class="bg"></div>
-        <div class="bg bg2"></div>
-        <div class="bg bg3"></div>
-        <header class="entete">
-            <div class="logo"><span>C</span>ompétances<b>.</b></div>
+    <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
 
-            <ul class="menu">
-                <li><a href="home.html">Accueil</a></li>
-                <li><a href="a_Propos.html">À Propos</a></li>
-                <li><a href="competances.html">Compétences</a></li>
-                <li><a href="realisation.html">Réalisations</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="preuves.html">Certificats</a></li>
-            </ul>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
 
-            <div class="reseaux">
-                <a href="https://mail.google.com/mail" aria-label="Email">
-                    <i class="fa-solid fa-at"></i>
-                </a>
-                <a
-                    href="https://www.linkedin.com/in/assiongbon-aim%C3%A9-kpodar-089682370"
-                    aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://wa.me/97953754/" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
+    <header class="entete">
+        <nav class="nav" data-i18n-aria="aria_nav" aria-label="Navigation principale">
+            <a class="logo" href="home.html" data-logo="logo_skills"><span>C</span>ompétences<b>.</b></a>
+
+            <div class="menu-panel" id="menu-panel">
+                <ul class="menu">
+                    <li><a href="home.html" data-i18n="nav_home">Accueil</a></li>
+                    <li><a href="a_Propos.html" data-i18n="nav_about">À propos</a></li>
+                    <li><a href="competances.html" aria-current="page" data-i18n="nav_skills">Compétences</a></li>
+                    <li><a href="realisation.html" data-i18n="nav_projects">Réalisations</a></li>
+                    <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+                    <li><a href="preuves.html" data-i18n="nav_certs">Certificats</a></li>
+                </ul>
+                <div class="reseaux">
+                    <a href="mailto:assiongbonaimekpodar@gmail.com" aria-label="Email"><i class="fa-solid fa-at" aria-hidden="true"></i><span class="label">Email</span></a>
+                    <a href="https://www.linkedin.com/in/assiongbon-aim%C3%A9-kpodar-089682370" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a>
+                    <a href="https://wa.me/22897953754" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i><span class="label">WhatsApp</span></a>
+                </div>
             </div>
-        </header>
-        <ul class="liens-flottants">
-            <li>
-                <a href="https://wa.me/97953754/" aria-label="WhatsApp">
-                    <i class="fa-brands fa-whatsapp whatsapp"></i>
-                </a>
-            </li>
-            <li>
-                <a
-                    href="https://www.linkedin.com/in/assiongbon-aim%C3%A9-kpodar-089682370"
-                    aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-            </li>
-        </ul>
-        <main class="container">
-            <section id="competences" class="section">
-                <div class="content">
-                    <div class="titre-section">
-                        <h2>Mes compétences de base</h2>
-                        <p>Les technologies et domaines que je maîtrise et que
-                            je continue à développer.</p>
+
+            <div class="lang" role="group" data-i18n-aria="aria_lang" aria-label="Langue">
+                <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+                <button type="button" data-lang="en" aria-pressed="false">EN</button>
+            </div>
+
+            <button class="burger" type="button" aria-controls="menu-panel" aria-expanded="false" data-i18n-aria="aria_menu_open" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <ul class="liens-flottants">
+        <li><a href="https://wa.me/22897953754" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/assiongbon-aim%C3%A9-kpodar-089682370" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+    </ul>
+
+    <main id="main" class="container">
+
+        <section id="competences" class="section">
+            <div class="content">
+                <div class="titre-section">
+                        <h2 data-i18n="sk_core">Mes compétences de base</h2>
+                        <p data-i18n="sk_core_p">Les technologies et domaines que je maîtrise et que je continue à développer.</p>
                     </div>
-                    <div class="grille-competences">
-
-                        <div class="carte-competence">
-                            <i class="fas fa-calendar-check"></i>
-                            <h3>GMAO <h4>(Maintenance Préventive)</h4></h3>
-                            <ul>
-                                <li>Planification et suivi des
-                                    interventions</li>
-                                <li>Prévention des pannes et optimisation</li>
-                                <li>Gestion des historiques et performance des
-                                    équipements</li>
-                            </ul>
-                        </div>
-
-                        <div class="carte-competence">
-                            <i class="fas fa-tools"></i>
-                            <h3>GMAO <h4>(Maintenance Corrective)</h4></h3>
-                            <ul>
-                                <li>Détection et résolution des pannes</li>
-                                <li>Interventions correctives rapides</li>
-                                <li>Suivi des incidents et remise en
-                                    service</li>
-                            </ul>
-                        </div>
-
-                        <div class="carte-competence">
-                            <i class="fas fa-tachometer-alt"></i>
-                            <h3>GMAO<h4>(Maintenance Conditionnelle)</h4></h3>
-                            <ul>
-                                <li>Surveillance des indicateurs de
-                                    performance</li>
-                                <li>Interventions basées sur l’état réel des
-                                    équipements</li>
-                                <li>Optimisation de la durée de vie et fiabilité
-                                    des
-                                    systèmes</li>
-                            </ul>
-                        </div>
-                        <div class="carte-competence">
-                            <i class="fa-solid fa-c"></i>
-                            <h3>C <h4>(Systèmes embarqués)</h4></h3>
-                            <p>
-                                Programmation bas niveau pour microcontrôleurs
-                                et systèmes embarqués,
-                                avec gestion efficace de la mémoire et des
-                                performances.
-                            </p>
-                        </div>
-
-                        <div class="carte-competence">
-                            <i class="fa-brands fa-python"></i>
-                            <h3>Python <h4>(Systèmes embarqués)</h4></h3>
-                            <p>
-                                Développement de scripts pour
-                                l’automatisation,
-                                le prototypage rapide et l’intégration avec des
-                                systèmes embarqués.
-                            </p>
-                        </div>
-
-                        <div class="carte-competence">
-                            <i class="fas fa-server"></i>
-                            <h3>Communication série<h4>(Systèmes
-                                    embarqués)</h4></h3>
-                            <p>Protocole UART/Serial
-                                Transmission de données entre capteurs et
-                                microcontrôleurs
-                                Intégration IoT et contrôle des dispositifs</p>
-                        </div>
-                    </div>
+                <div class="grille-competences">
+                    <article class="carte-competence">
+                        <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                        <h3 data-i18n="t_gmao">GMAO</h3>
+                        <p class="sub" data-i18n="sub_prev">(Maintenance préventive)</p>
+                        <ul>
+                            <li data-i18n="it_prev_1">Planification et suivi des interventions</li>
+                            <li data-i18n="it_prev_2">Prévention des pannes et optimisation</li>
+                            <li data-i18n="it_prev_3">Gestion des historiques et de la performance des équipements</li>
+                        </ul>
+                    </article>
+                    <article class="carte-competence">
+                        <i class="fas fa-tools" aria-hidden="true"></i>
+                        <h3 data-i18n="t_gmao">GMAO</h3>
+                        <p class="sub" data-i18n="sub_corr">(Maintenance corrective)</p>
+                        <ul>
+                            <li data-i18n="it_corr_1">Détection et résolution des pannes</li>
+                            <li data-i18n="it_corr_2">Interventions correctives rapides</li>
+                            <li data-i18n="it_corr_3">Suivi des incidents et remise en service</li>
+                        </ul>
+                    </article>
+                    <article class="carte-competence">
+                        <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
+                        <h3 data-i18n="t_gmao">GMAO</h3>
+                        <p class="sub" data-i18n="sub_cond">(Maintenance conditionnelle)</p>
+                        <ul>
+                            <li data-i18n="it_cond_1">Surveillance des indicateurs de performance</li>
+                            <li data-i18n="it_cond_2">Interventions basées sur l’état réel des équipements</li>
+                            <li data-i18n="it_cond_3">Optimisation de la durée de vie et de la fiabilité des systèmes</li>
+                        </ul>
+                    </article>
+                    <article class="carte-competence">
+                        <i class="fa-solid fa-c" aria-hidden="true"></i>
+                        <h3 data-i18n="t_c">C</h3>
+                        <p class="sub" data-i18n="sub_emb">(Systèmes embarqués)</p>
+                        <p data-i18n="tx_c">Programmation bas niveau pour microcontrôleurs et systèmes embarqués, avec une gestion efficace de la mémoire et des performances.</p>
+                    </article>
+                    <article class="carte-competence">
+                        <i class="fa-brands fa-python" aria-hidden="true"></i>
+                        <h3 data-i18n="t_python">Python</h3>
+                        <p class="sub" data-i18n="sub_emb">(Systèmes embarqués)</p>
+                        <p data-i18n="tx_python">Développement de scripts pour l’automatisation, le prototypage rapide et l’intégration avec des systèmes embarqués.</p>
+                    </article>
+                    <article class="carte-competence">
+                        <i class="fas fa-server" aria-hidden="true"></i>
+                        <h3 data-i18n="t_serial">Communication série</h3>
+                        <p class="sub" data-i18n="sub_emb">(Systèmes embarqués)</p>
+                        <p data-i18n="tx_serial">Protocole UART/Serial : transmission de données entre capteurs et microcontrôleurs, intégration IoT et contrôle des dispositifs.</p>
+                    </article>
                 </div>
-            </section>
-            <section id="competences" class="section">
-                <div class="content">
-                    <div class="titre-section">
-                        <h2>Mes compétences secondaires</h2>
-                        <p>Les technologies et domaines que j'apprends de plus
-                            et que
-                            j'utiliserai dans les années à venir.</p>
+            </div>
+        </section>
+
+        <section id="secondaires" class="section">
+            <div class="content">
+                <div class="titre-section">
+                        <h2 data-i18n="sk_second">Mes compétences secondaires</h2>
+                        <p data-i18n="sk_second_p">Les technologies et domaines que j’apprends en plus et que j’utiliserai dans les années à venir.</p>
                     </div>
-                    <div class="grille-competences">
-                        <div class="carte-competence">
-                            <i class="fa-brands fa-html5"></i>
-                            <h3>HTML5</h3>
-                            <p>Structuration de pages web claires, modernes et
-                                accessibles.</p>
-                        </div>
-                        <div class="carte-competence">
-                            <i class="fa-brands fa-css3-alt"></i>
-                            <h3>CSS3</h3>
-                            <p>Mise en forme responsive, animations et
-                                interfaces élégantes.</p>
-                        </div>
-                        <div class="carte-competence">
-                            <i class="fa-brands fa-js"></i>
-                            <h3>JavaScript</h3>
-                            <p>Interactions dynamiques, logique côté client /
-                                serveur et
-                                amélioration UX.</p>
-                        </div>
-                        <div class="carte-competence">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                            <h3>Responsive Design</h3>
-                            <p>Création d’interfaces adaptées aux mobiles,
-                                tablettes et ordinateurs.</p>
-                        </div>
-                        <div class="carte-competence">
-                            <i class="fas fa-mobile-alt"></i>
-                            <h3>Flutter</h3>
-                            <p>Conception d’interfaces lisibles, intuitives et
-                                agréables à utiliser.</p>
-                        </div>
-                        <div class="carte-competence">
-                            <i class="fa-solid fa-code"></i>
-                            <h3>Développement web</h3>
-                            <p>Conception de projets web fonctionnels,
-                                structurés et maintenables.</p>
-                        </div>
-                    </div>
+                <div class="grille-competences">
+                    <article class="carte-competence">
+                        <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                        <h3 data-i18n="t_html">HTML5</h3>
+                        <p data-i18n="tx_html">Structuration de pages web claires, modernes et accessibles.</p>
+                    </article>
+                    <article class="carte-competence">
+                        <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                        <h3 data-i18n="t_css">CSS3</h3>
+                        <p data-i18n="tx_css">Mise en forme responsive, animations et interfaces élégantes.</p>
+                    </article>
+                    <article class="carte-competence">
+                        <i class="fa-brands fa-js" aria-hidden="true"></i>
+                        <h3 data-i18n="t_js">JavaScript</h3>
+                        <p data-i18n="tx_js">Interactions dynamiques, logique côté client / serveur et amélioration de l’UX.</p>
+                    </article>
+                    <article class="carte-competence">
+                        <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+                        <h3 data-i18n="t_resp">Responsive Design</h3>
+                        <p data-i18n="tx_resp">Création d’interfaces adaptées aux mobiles, tablettes et ordinateurs.</p>
+                    </article>
+                    <article class="carte-competence">
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                        <h3 data-i18n="t_flutter">Flutter</h3>
+                        <p data-i18n="tx_flutter">Conception d’interfaces lisibles, intuitives et agréables à utiliser.</p>
+                    </article>
+                    <article class="carte-competence">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        <h3 data-i18n="t_webdev">Développement web</h3>
+                        <p data-i18n="tx_webdev">Conception de projets web fonctionnels, structurés et maintenables.</p>
+                    </article>
                 </div>
-            </section>
-            <section id="apropos" class="section corps_apropos">
-                <div class="content hero-apropos">
-                    <div class="texte-apropos">
-                        <h1>Mes compétences</h1>
-                        <h2>Les compétences de base </h2>
-                        <p>
-                            Mes compétences de base sont les languages que je
-                            maîtrise
-                            le plus.
-                        </p>
-                        <h2>Les compétences secondaires </h2>
-                        <p>
-                            Ces compétences sont complémentaires et je les
-                            utilise
-                            rarement.
-                        </p>
-                        <p>
-                            <h2> Mon objectif</h2> Veiller au bon fonctionnement
-                            durables des équipeuments (logiciels et matériels)
-                            informatique et réseau en proposant des solutions
-                            efficaces et rapides.
-                        </p>
-                        <div class="boutons-apropos">
-                            <a href="realisation.html"
-                                class="btn-principal">Voir mes réalisations</a>
-                            <a href="services.html" class="btn-secondaire">Mes
-                                services</a>
+            </div>
+        </section>
+
+        <section id="apropos" class="section">
+            <div class="content hero-apropos">
+                <div class="texte-apropos">
+                    <h1 data-i18n="skills_h1">Mes compétences</h1>
+                    <h2 data-i18n="skills_h2a">Les compétences de base</h2>
+                    <p data-i18n="skills_pa">Mes compétences de base sont les langages et domaines que je maîtrise le mieux.</p>
+                    <h2 data-i18n="skills_h2b">Les compétences secondaires</h2>
+                    <p data-i18n="skills_pb">Ces compétences sont complémentaires et je les utilise plus rarement.</p>
+                    <h2 data-i18n="skills_h2c">Mon objectif</h2>
+                    <p data-i18n="skills_pc">Veiller au bon fonctionnement durable des équipements informatiques et réseaux (logiciels et matériels) en proposant des solutions efficaces et rapides.</p>
+                    <div class="boutons-apropos">
+                            <a class="btn-principal" href="realisation.html" data-i18n="btn_see_projects">Voir mes réalisations</a>
+                            <a class="btn-secondaire" href="services.html" data-i18n="btn_my_services">Mes services</a>
                         </div>
-                    </div>
-                    <div class="image-apropos">
-                        <img src="images/-Aimé-.png"
-                            alt="Photo de présentation">
-                    </div>
                 </div>
-            </section>
-        </main>
-    </body>
+                <div class="image-apropos">
+                    <img src="images/-Aimé-.png" loading="lazy" decoding="async" data-i18n-alt="alt_portrait" alt="Portrait de KPODAR Assiongbon Aimé">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/translations.js"></script>
+    <script src="js/site.js"></script>
+</body>
 </html>

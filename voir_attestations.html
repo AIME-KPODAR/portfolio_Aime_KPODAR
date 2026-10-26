@@ -1,112 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mes attestations</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f5f8">
+    <title>Mes attestations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body data-page="attest">
 
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        <link rel="stylesheet" href="style_voir_attestations.css">
+    <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
 
-    </head>
-    <body>
-        <div class="bg"></div>
-        <div class="bg bg2"></div>
-        <div class="bg bg3"></div>
-        <header class="entete">
-            <div class="logo"><span>A</span>ttestations<b>.</b></div>
-            <ul class="menu">
-                <li><a href="home.html">Accueil</a></li>
-                <li><a href="a_Propos.html">À Propos</a></li>
-                <li><a href="competances.html">Compétences</a></li>
-                <li><a href="realisation.html">Réalisations</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="preuves.html">Certificats</a></li>
-            </ul>
-            <div class="reseaux">
-                <a href="https://mail.google.com/mail" aria-label="Email">
-                    <i class="fa-solid fa-at"></i>
-                </a>
-                <a
-                    href="https://www.linkedin.com/in/assiongbon-aim%C3%A9-kpodar-089682370"
-                    aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://wa.me/97953754/" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </div>
-        </header>
-        <ul class="liens-flottants">
-            <li>
-                <a href="https://wa.me/97953754/" aria-label="WhatsApp">
-                    <i class="fa-brands fa-whatsapp whatsapp"></i>
-                </a>
-            </li>
-            <li>
-                <a
-                    href="https://www.linkedin.com/in/assiongbon-aim%C3%A9-kpodar-089682370"
-                    aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-            </li>
-        </ul>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
 
-        <main class="container">
+    <header class="entete">
+        <nav class="nav" data-i18n-aria="aria_nav" aria-label="Navigation principale">
+            <a class="logo" href="home.html" data-logo="logo_attest"><span>A</span>ttestations<b>.</b></a>
 
-            <section id="competences" class="section">
-                <div class="content">
-                    <div class="titre-section">
-                        <h4 class="leaimé">KPODAR Assiongbon Aimé</h4>
-                        <h2>Attestations</h2>
-                        <p>NB: Mes futures attestations seronts mis à jour au
-                            fur et à mesure de mon parcours</p>
-                    </div>
-                    <div class="grille-competences">
-                        <div class="carte-competence">
-                            <img src="images/Wazuh-orig.png">
-                            <h3>Déployement d'un SOC complet avec Wazuh</h3>
-                            <p>Installation et configuration
-                                Surveillance et alertes
-                                Intégration SIEM et sécurité</p>
-                            <div class="boutons-apropos">
-                                <a
-                                    href="images/Attestation Déployer un SOC avec Wazuh KPODAR Assiongbon Aimé.jpg"
-                                    class="btn-secondaire">Voir</a>
-                            </div>
-                        </div>
-                        <div class="carte-competence">
-                            <img src="images/wifi-video-surveillance.jpg">
-                            <h3>Montage de caméra et antenne parabolique</h3>
-                            <p>Installation de caméras
-                                Montage de paraboles
-                                Configuration et maintenance</p>
-                            <div class="boutons-apropos">
-                                <a
-                                    href="images/ATTESTATION DE FORMATION EL PROF Aab KPODAR Assiongbon Aimé.jpg"
-                                    class="btn-secondaire">Voir</a>
-                            </div>
-                        </div>
-                        <div class="carte-competence">
-                            <img src="images/flutter.png">
-                            <h3>Développement mobile avec flutter</h3>
-                            <p> Développement mobile
-                                multiplateforme
-                                UI/UX design et widgets personnalisés
-                                Intégration backend et performance
-                            </p>
-                            <div class="boutons-apropos">
-                                <a
-                                    href="images/Flutter_KPODAR Assiongbon Aimé.jpg"
-                                    class="btn-secondaire">Voir</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="menu-panel" id="menu-panel">
+                <ul class="menu">
+                    <li><a href="home.html" data-i18n="nav_home">Accueil</a></li>
+                    <li><a href="a_Propos.html" data-i18n="nav_about">À propos</a></li>
+                    <li><a href="competances.html" data-i18n="nav_skills">Compétences</a></li>
+                    <li><a href="realisation.html" data-i18n="nav_projects">Réalisations</a></li>
+                    <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+                    <li><a href="preuves.html" aria-current="page" data-i18n="nav_certs">Certificats</a></li>
+                </ul>
+                <div class="reseaux">
+                    <a href="mailto:assiongbonaimekpodar@gmail.com" aria-label="Email"><i class="fa-solid fa-at" aria-hidden="true"></i><span class="label">Email</span></a>
+                    <a href="https://www.linkedin.com/in/assiongbon-aim%C3%A9-kpodar-089682370" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a>
+                    <a href="https://wa.me/22897953754" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i><span class="label">WhatsApp</span></a>
                 </div>
-            </section>
+            </div>
 
-        </main>
+            <div class="lang" role="group" data-i18n-aria="aria_lang" aria-label="Langue">
+                <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+                <button type="button" data-lang="en" aria-pressed="false">EN</button>
+            </div>
 
-    </body>
+            <button class="burger" type="button" aria-controls="menu-panel" aria-expanded="false" data-i18n-aria="aria_menu_open" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <ul class="liens-flottants">
+        <li><a href="https://wa.me/22897953754" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/assiongbon-aim%C3%A9-kpodar-089682370" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+    </ul>
+
+    <main id="main" class="container">
+        <section class="section">
+            <div class="content">
+                <div class="titre-section">
+                    <p class="eyebrow" data-i18n="person_name">KPODAR Assiongbon Aimé</p>
+                    <h2 data-i18n="att_h">Attestations</h2>
+                    <p data-i18n="att_p">NB : mes futures attestations seront ajoutées au fur et à mesure de mon parcours.</p>
+                </div>
+                <div class="grille-competences">
+                    <article class="carte-competence">
+                        <img src="images/Wazuh-orig.png" loading="lazy" decoding="async" alt="" aria-hidden="true">
+                        <h3 data-i18n="att1_t">Déploiement d’un SOC complet avec Wazuh</h3>
+                        <p data-i18n-html="att1_p">Installation et configuration<br>Surveillance et alertes<br>Intégration SIEM et sécurité</p>
+                        <div class="boutons-apropos">
+                            <a class="btn-secondaire" href="images/Attestation Déployer un SOC avec Wazuh KPODAR Assiongbon Aimé.jpg" target="_blank" rel="noopener" data-i18n="btn_view">Voir</a>
+                        </div>
+                    </article>
+                    <article class="carte-competence">
+                        <img src="images/wifi-video-surveillance.jpg" loading="lazy" decoding="async" alt="" aria-hidden="true">
+                        <h3 data-i18n="att2_t">Montage de caméras et d’antennes paraboliques</h3>
+                        <p data-i18n-html="att2_p">Installation de caméras<br>Montage de paraboles<br>Configuration et maintenance</p>
+                        <div class="boutons-apropos">
+                            <a class="btn-secondaire" href="images/ATTESTATION DE FORMATION EL PROF Aab KPODAR Assiongbon Aimé.jpg" target="_blank" rel="noopener" data-i18n="btn_view">Voir</a>
+                        </div>
+                    </article>
+                    <article class="carte-competence">
+                        <img src="images/flutter.png" loading="lazy" decoding="async" alt="" aria-hidden="true">
+                        <h3 data-i18n="att3_t">Développement mobile avec Flutter</h3>
+                        <p data-i18n-html="att3_p">Développement mobile multiplateforme<br>Design UI/UX et widgets personnalisés<br>Intégration backend et performance</p>
+                        <div class="boutons-apropos">
+                            <a class="btn-secondaire" href="images/Flutter_KPODAR Assiongbon Aimé.jpg" target="_blank" rel="noopener" data-i18n="btn_view">Voir</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/translations.js"></script>
+    <script src="js/site.js"></script>
+</body>
 </html>

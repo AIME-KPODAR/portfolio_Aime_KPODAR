@@ -1,0 +1,28 @@
+PORTFOLIO — responsive (mobile + web) et bilingue FR / EN
+==========================================================
+
+Où mettre tes fichiers
+----------------------
+Copie ce dossier à côté de tes dossiers d'origine, ou copie tes dossiers dans celui-ci :
+
+    index.html, home.html, a_Propos.html ...   (pages)
+    css/site.css                               (UN seul style pour tout le site)
+    js/site.js                                 (menu mobile, changement de langue, formulaires)
+    js/translations.js                         (tous les textes FR et EN)
+    images/   video/   pdf/                    (tes dossiers : à remettre ici, noms inchangés)
+
+Tu peux supprimer les anciens style_*.css et formulaire_demande.html (remplacés / jamais utilisé).
+
+Modifier un texte
+-----------------
+- Texte français : directement dans le fichier .html concerné ET dans js/translations.js (section "fr").
+- Texte anglais  : dans js/translations.js (section "en"), repérer la clé (ex. "about_p1").
+- Chaque texte traduit porte un attribut data-i18n="clé" dans le HTML.
+
+Réglages utiles
+---------------
+- Numéro WhatsApp des formulaires : js/site.js, variable WHATSAPP_NUMBER (en haut du fichier).
+  Les liens WhatsApp des pages utilisent 22897953754 : à changer dans les .html si besoin.
+- Langue par défaut : choix mémorisé > langue du navigateur (français => FR, sinon EN).
+  Forcer une langue : ajouter ?lang=en ou ?lang=fr à l'adresse de la page.
+- CV téléchargeable : pdf/CV.pdf (une seule version, non traduite).
